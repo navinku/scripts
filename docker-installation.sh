@@ -12,3 +12,8 @@ chmod +x ~/.docker/cli-plugins/docker-compose
 
 # Verify installation
 docker compose version
+
+sudo usermod -aG docker $USER
+newgrp docker
+
+exec su -l $USER
